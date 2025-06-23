@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lana Al Dossary | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Progress Bar Styles */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: #2563eb;
+      width: 0;
+      z-index: 10000;
+      transition: width 0.2s ease;
+    }
+
+    /* Filter Buttons */
+    .filter-buttons {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .filter-btn {
+      cursor: pointer;
+      margin: 0 8px;
+      padding: 8px 15px;
+      background-color: #0f172a;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .filter-btn:hover {
+      background-color: #2563eb;
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #ddd;
+    }
+
+    body.dark-mode a {
+      color: #90cdf4;
+    }
+
+    /* Buttons styles for dark mode toggle and back to top */
+    #dark-mode-toggle, #back-to-top {
+      position: fixed;
+      right: 20px;
+      z-index: 9999;
+      padding: 10px;
+      border-radius: 50%;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 1.2rem;
+      background-color: #0f172a;
+      transition: background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #dark-mode-toggle:hover,
+    #back-to-top:hover {
+      background-color: #2563eb;
+    }
+
+    #dark-mode-toggle {
+      bottom: 70px;
+    }
+
+    #back-to-top {
+      bottom: 20px;
+      display: none;
+      background-color: #2563eb;
+    }
+
+    #back-to-top i {
+      font-size: 18px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">Lana Al Dossary</h1>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#hackathons">Hackathons</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p>I'm Lana Al Dossary, a senior MIS student passionate about data, development, and solving problems through technology. I'm always eager to build, learn, and grow in the tech field.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+
+      <!-- Filter Buttons -->
+      <div class="filter-buttons">
+        <button class="filter-btn" data-type="all">All</button>
+        <button class="filter-btn" data-type="dashboard">Dashboard</button>
+        <button class="filter-btn" data-type="ml">ML Model</button>
+      </div>
+
+      <div class="project-grid">
+        <div class="project-card dashboard">
+          <h3>Stock Market Dashboard</h3>
+          <p>Visualized stock data for various companies using Python, pandas, and Matplotlib.</p>
+          <a href="stock_market_dashboard.py" target="_blank" class="btn">Download Project</a>
+        </div>
+        <div class="project-card ml">
+          <h3>Twitter Sentiment Classifier</h3>
+          <p>Developed a sentiment analysis model using Logistic Regression and SVM on airline tweet data.</p>
+          <a href="Twitter_classifier.pdf" target="_blank" class="btn">Download Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Data Analyst intern - Zidio Development</h3>
+            <p class="date">Jan 2025  Feb 2025</p>
+            <div class="task">
+              <p><strong>Face Detection</strong></p>
+              <p>Built a face detection notebook using OpenCV and image processing.</p>
+              <a href="face_detection.py" class="btn" target="_blank">Download .py</a>
+            </div>
+            <div class="task">
+              <p><strong>Data Visualization</strong></p>
+              <p>Created visual dashboards with Matplotlib and Seaborn.</p>
+              <a href="data_visualization.py" class="btn" target="_blank">Download .py</a>
+            </div>
+            <div class="task">
+              <p><strong>Image Processing</strong></p>
+              <p>Applied filters and transformations to demonstrate image manipulation.</p>
+              <a href="img_segmentation.py" class="btn" target="_blank">Download .py</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Data Analyst Intern  Data X</h3>
+            <p class="date">July 2024</p>
+            <p>Worked on supervised classification tasks and built ML models using Python.</p>
+            <p><strong>Dashboards:</strong></p>
+            <div class="dashboard-gallery">
+              <div class="dashboard-card">
+                <img src="images/performance-dashboard.jpg" alt="Performance Dashboard" />
+                <p>Performance Dashboard</p>
+              </div>
+              <div class="dashboard-card">
+                <img src="images/sql-startup-dashboard.jpg" alt="SQL Startup Dashboard" />
+                <p>SQL Startup Dashboard</p>
+              </div>
+              <div class="dashboard-card">
+                <img src="images/gender-comparison-dashboard.jpg" alt="Gender Comparison Dashboard" />
+                <p>Gender Purchase Comparison</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>SME Student  KAUST Academy</h3>
+            <p class="date">May 2024</p>
+            <p>Provided consulting and business modeling support for local SMEs through student-led engagements.</p>
+            <p><strong>IoT Project</strong></p>
+            <a class="download-btn" href="files/IoT-project.pdf" download>Download.pdf</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hackathons" class="section">
+    <div class="container">
+      <h2 class="section-title">Hackathons & Competitions</h2>
+      <div class="hackathon-slider">
+        <button id="prev-btn" class="nav-btn" aria-label="Previous Hackathon">&lt;</button>
+        <div id="hackathon-cards-container"></div>
+        <button id="next-btn" class="nav-btn" aria-label="Next Hackathon">&gt;</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><p>Python</p></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"><p>SQL</p></div>
+        <div class="skill-card"><img src="https://img.icons8.com/color/96/000000/power-bi.png" alt="Power BI"><p>Power BI</p></div>
+        <div class="skill-card"><img src="https://img.icons8.com/fluency/96/microsoft-excel-2019.png" alt="Excel"><p>Excel</p></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git & GitHub"><p>Git & GitHub</p></div>
+        <div class="skill-card"><img src="https://img.icons8.com/color/96/tableau-software.png" alt="Tableau"><p>Tableau</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="section">
+    <div class="container">
+      <h2 class="section-title">Resume</h2>
+      <a href="Lana_AL_Dossary_CV.pdf" target="_blank" class="btn">Download CV (PDF)</a>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p>Email: lanaaaldossary@gmail.com</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/lana-al-dossary-1575a4249" target="_blank">lana-al-dossary</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lana Al Dossary. All rights reserved.</p>
+  </footer>
+
+  <!-- Dark Mode Toggle Button -->
+  <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>
